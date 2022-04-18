@@ -13,14 +13,14 @@
           <div class="user-heading round">
               <!-- <a href="#"> -->
               <img  src="/img/téléchargement.png"/>
-              <!-- <img  src="/image/{{$professeur->image}}"/> -->
+              <!-- <img  src="/image/{{$professeur->image}}"/>  -->
               </a>
               <h1><span class="font-weight-bold">{{$professeur->nom}}  {{$professeur->prenom}}</span></h1>
              
           </div>
 
           <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a href="#" class="btn btn-primary profile-button"> <i class="fa fa-user"></i> Profile</a></li>
+              <!-- <li class="active"><a href="#" class="btn btn-primary profile-button"> <i class="fa fa-user"></i> Profile</a></li> -->
               <!-- <li><a href="#"> <i class="fa fa-calendar"></i> Recent Activity <span class="label label-warning pull-right r-activity">9</span></a></li> -->
               <li><form action="" method="post"><a href="{{route('professeurs.edit',$professeur->id)}}" class="btn btn-primary">Edit profile</a></form></li>
           </ul>

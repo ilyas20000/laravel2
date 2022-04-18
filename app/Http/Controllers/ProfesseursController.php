@@ -13,7 +13,7 @@ class ProfesseursController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth','verified']);
     }
     /**
      * Display a listing of the resource.
@@ -38,7 +38,13 @@ class ProfesseursController extends Controller
      */
     public function create()
     {
-        return view('create');
+        if (auth()->user()->id == 3) {
+            $professeurs = Professeurs::all();
+            return view('indexadmin');
+        } else {
+            $professeurs = Professeurs::where('user_id', Auth::user()->id)->get();
+            return view('home');
+        }
     }
 
     /**

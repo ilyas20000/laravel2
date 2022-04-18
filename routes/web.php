@@ -30,8 +30,8 @@ Route::get('show', function () {
     return view('show');
 });
 
-Auth::routes();
+Auth::routes(['verify'=> true]);
 
 Route::get('/professeurs', [App\Http\Controllers\HomeController::class, 'index'])->name('professeurs');
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 Route::resource('professeurs',ProfesseursController::class);

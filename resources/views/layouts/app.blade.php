@@ -63,9 +63,9 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
                                 <form action="" method="post">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     My profil
-                                </a>
+                                </a> -->
                                 </form>
                                 </li>
 
